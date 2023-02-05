@@ -11,7 +11,7 @@ This keymap was designed for a 4x6 corne split ergonomic keyboard.  It is intend
 
 
 # FLASHING INSTRUCTIONS
-* make sure to disconect usb first and allow time to discahrge before disconnecting trrs
+* make sure to disconect usb first and allow time to discharge before disconnecting trrs
 
 ## compile new firmware
 5. run command to compile
