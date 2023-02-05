@@ -18,13 +18,13 @@ This keymap was designed for a 4x6 corne split ergonomic keyboard.  It is intend
 qmk compile -kb crkbd -km adamf
 
 ## flash left
-6. conntect left keyboard
+6. connect left keyboard
 7. push reset button
 8. $ qmk flash -kb crkbd -km adamf -bl dfu
 9. disconnect
 
 ## flash right
-10. conntect right keyboard
+10. connect right keyboard
 11. push reset button
 12. $ qmk flash -kb crkbd -km adamf -bl dfu
 13. disconnect
