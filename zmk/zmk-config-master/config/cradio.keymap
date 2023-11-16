@@ -1,0 +1,159 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+
+&mt {
+  //  flavor = "tap-preferred";
+  // tapping_term_ms = <200>;
+};
+
+/ { 
+// COMBOS -----------------------------------------------------------------------
+    combos {
+        compatible = "zmk,combos";
+        
+	// layer 0 (alphas)
+        combo_tab {
+            layers = <0>;
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp TAB>;
+        }; 
+
+        combo_del {
+            layers = <0>;
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp DELETE>;
+        }; 
+        
+        combo_slash {
+            layers = <0>;
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp SLASH>;
+        }; 
+          
+        combo_qmark {
+            layers = <0>;
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp QMARK>;
+        }; 
+
+        combo_excl {
+            layers = <0>;
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp EXCL>;
+        }; 
+        
+        combo_caps {
+            layers = <0>;
+            timeout-ms = <50>;
+            key-positions = <20 29>;
+            bindings = <&kp CAPS>;
+        }; 
+          
+        // layer 1 (numbers and symbols)
+        combo_lbrc {
+            layers = <1>;
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp LBRC>;
+        }; 
+        
+        combo_lbkt {
+            layers = <1>;
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp LBKT>;
+        };    
+        
+        combo_lt {
+            layers = <1>;
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp LT>;
+        }; 
+        
+        combo_gt {
+            layers = <1>;
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&kp GT>;
+        }; 
+                
+        combo_rbkt {
+            layers = <1>;
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp RBKT>;
+        }; 
+        
+        combo_rbrc {
+            layers = <1>;
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp RBRC>;
+        };     
+    };
+    
+// MOD MORPH -----------------------------------------------------------------------
+   behaviors {
+       morph_comma_semi: morph_comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_COMMA_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        morph_dot_colon: morph_dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+    
+// KEYMAP -----------------------------------------------------------------------
+    keymap {
+	compatible = "zmk,keymap";
+                
+       	default_layer {
+	bindings = <
+	&kp Q 		&kp W 		&kp E 		&kp R 		&kp T 				&kp Y 		&kp U  	&kp I		    &kp O   		&kp P 
+	&kp A 		&kp S 		&kp D 		&kp F 		&kp G 				&kp H 		&kp J 	&kp K 		    &kp L 		&kp QUOT
+	&mt LSFT Z 	&kp X 		&kp C 		&kp V 		&kp B				&kp N 		&kp M  	&morph_comma_semi   &morph_dot_colon  	&mt LSFT RET
+          						&mo 1 		&kp SPC  			&kp BKSP 	&mo 2 
+	>;
+	};
+
+       	left_layer {
+	bindings = <
+	&kp GRAVE   	&kp AT		&kp HASH  	&kp DLLR  	&kp PRCNT    			&kp CARET  	&kp AMPS   	&kp STAR  	&kp LPAR	&kp RPAR		
+	&kp N1	  	&kp N2    	&kp N3    	&kp N4    	&kp N5				&kp N6 	  	&kp N7    	&kp N8    	&kp N9    	&kp N0 
+	&kp TILDE 	&kp EQUAL 	&kp PLUS  	&kp MINUS 	&kp UNDER 			&kp BSLH  	&kp PIPE 	&kp COMMA 	&kp DOT  	&kp SLASH 
+					      		&trans  	&kp SPC				&kp BKSP	&none
+	>;
+	};
+		
+	right_layer {
+	bindings = <
+	&kp ESCAPE  	&none	    	&none     	&none	    	&none   			&none   	&none  		&none    	&kp DELETE	&kp BKSP
+	&bt BT_SEL 0	&bt BT_SEL 1   	&bt BT_SEL 2   	&bt BT_SEL 3  	&bt BT_CLR	 		&kp PG_UP	&kp LEFT  	&kp UP  	&kp RIGHT  	&kp LSFT		
+	&kp LC(Z)	&kp LC(X)    	&kp LC(C)     	&kp LC(V)	&none		     		&kp PG_DN	&kp HOME   	&kp DOWN     	&kp END		&kp LSFT
+							&none	  	&trans 				&trans  	&trans 
+	>;
+	};
+    };
+};
