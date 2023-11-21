@@ -17,17 +17,14 @@
 - whatever is the top workflow, most recent
 - "firmware" in "artifacts" section near bottom of the page
 - extract zip
+- Open unzipped directory with GUI file manager
 
-_____________________________________________
-## FLASH
-- Open unzipped directory with GUI file manager:
-
-### Left
+### Flash Left Side
 - Connect left keyboard half
 - Short GRD and RST pins on nice_nano with paperclip (quick double tap)
 - Drag zmk.u2f file to cradio (Don't worry about error message)
 
-### Right
+### Flash Right Side
 - Connect right keyboard half
 - Short GRD and RST pins on nice_nano with paperclip (double tap)
 - Drag zmk.u2f file to cradio (Don't worry about error message)
