@@ -1,6 +1,6 @@
 # Create ZMK firmware and flash keyboard
 
-## push to github
+### push to github
 - make changes to keymap in local zmk-config/config as desired
 - $ git add .
 - $ git commit
@@ -10,7 +10,7 @@
     - git username=AdamFurlough
     - password=personal access token from bitwarden
 
-## download firmware
+### download firmware
 - open github in browser
 - go to zmk cofig repo
 - "actions"
