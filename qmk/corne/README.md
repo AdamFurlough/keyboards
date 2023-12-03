@@ -1,6 +1,6 @@
 # ADAM'S CORNE KEYMAP
 
-![keymap image](adamf23.drawio.png)
+![keymap image](adamf24.drawio.png)
 
 This keymap was designed for a 4x6 corne split ergonomic keyboard.  It is intended to be used along with a ploopy nano trackball positioned near the right thumb.  I write only in english and am a novice programmer so features for other languages and advanced usage beyond basic bash, python, html, and javascript were not considered in the design.  I tried and don't like fiddling with home row mods, autoshift, or toggling layers so you won't find any of those here.
 
