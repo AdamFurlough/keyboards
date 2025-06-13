@@ -2,9 +2,8 @@
 
 ### What is ZMK?
 
-Modern, open source keyboard firmware powered by Zephyr
-
-https://zmk.dev/
+- Modern, open source keyboard firmware powered by Zephyr
+- https://zmk.dev/
 
 ### Update keymap file
 
