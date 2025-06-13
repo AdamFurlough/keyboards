@@ -1,5 +1,11 @@
 # Create ZMK firmware and flash keyboard
 
+### What is ZMK?
+
+Modern, open source keyboard firmware powered by Zephyr
+
+https://zmk.dev/
+
 ### Update keymap file
 
 - make changes to keymap in local `zmk-config/config` as desired
