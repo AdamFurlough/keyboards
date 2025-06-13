@@ -1,13 +1,13 @@
 # Create ZMK firmware and flash keyboard
 
-### push to github
+### Update keymap file
 
 - make changes to keymap in local `zmk-config/config` as desired
 - `git add .`
 - `git commit -m "add message here"`
 - `git push`
 
-### download firmware
+### Download firmware
 
 - open github in browser
 - go to zmk cofig repo
